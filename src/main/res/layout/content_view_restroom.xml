@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.steven.pottyfinderapp.MapsActivity"
+    tools:showIn="@layout/activity_view_restroom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/view_rl_map"
+            android:layout_alignParentTop="true">
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.example.miguel.pottyfinderv20.ViewRestroomActivity"
+                android:id="@+id/view_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textSize="15sp"
+            android:text="Potty Rate"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/view_potty_rate_text"
+            android:layout_below="@+id/view_rl_map"/>
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/seperator1"
+            android:layout_below="@id/view_potty_rate_text"
+            android:layout_centerHorizontal="true"/>
+        <RatingBar
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_ratingbar"
+            android:layout_gravity="center"
+            android:layout_below="@+id/seperator1"
+            android:layout_centerHorizontal="true"
+            android:stepSize="1"
+            android:max="5"
+            android:focusable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textSize="15sp"
+            android:text="Benefits"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/view_potty_benefits"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/view_ratingbar"
+            />
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/seperator2"
+            android:layout_below="@id/view_potty_benefits"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/view_rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seperator2"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dryer"
+                android:id="@+id/view_benefits_dryer"
+                android:layout_marginLeft="54dp"
+                android:layout_marginStart="54dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soap"
+                android:id="@+id/view_benefits_soap"
+                android:layout_below="@+id/view_benefits_dryer"
+                android:layout_alignLeft="@+id/view_benefits_dryer"
+                android:layout_alignStart="@+id/view_benefits_dryer"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bidet"
+                android:id="@+id/view_benefits_bidet"
+                android:checked="false"
+                android:layout_below="@+id/view_benefits_soap"
+                android:layout_alignRight="@+id/view_benefits_soap"
+                android:layout_alignEnd="@+id/view_benefits_soap" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diaper Station"
+                android:id="@+id/view_benefits_diaper_sec"
+                android:checked="false"
+                android:layout_alignTop="@+id/view_benefits_dryer"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispenser"
+                android:id="@+id/view_benefits_dispenser"
+                android:checked="false"
+                android:layout_alignBottom="@+id/view_benefits_soap"
+                android:layout_alignLeft="@+id/view_benefits_diaper_sec"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tissue"
+                android:id="@+id/view_benefits_tissue"
+                android:checked="false"
+                android:layout_alignBottom="@+id/view_benefits_bidet"
+                android:layout_alignLeft="@id/view_benefits_diaper_sec" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textSize="15sp"
+            android:text="Reviews"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/view_review"
+            android:layout_below="@+id/view_rl_layout"
+            />
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/seperator3"
+            android:layout_below="@id/view_review"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/view_cv_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="10dp"
+            android:layout_below="@+id/seperator3"
+            android:layout_centerHorizontal="true"
+            card_view:cardBackgroundColor="#3F51B5"
+            android:layout_marginBottom="15dp"
+            card_view:cardElevation="4dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write a Review"
+                android:textColor="#fff"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15sp"
+                />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/view_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/view_cv_layout">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddRestroomDetailsActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/imageViewT"
+                android:background="@drawable/bath2"
+                android:layout_alignParentTop="true"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageViewT"
+                android:imeOptions="actionDone"
+                android:id="@+id/til">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Potty Name! (Max 15)"
+                    android:id="@+id/add_name"
+                    android:maxLength="15"
+                    android:imeOptions="actionDone"
+                    android:textAlignment="center"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textSize="15sp"
+                android:text="Privacy"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/add_potty_privacy"
+                android:layout_below="@+id/til"/>
+            <View
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/seperator2"
+                android:layout_below="@id/add_potty_privacy"
+                android:layout_centerHorizontal="true"/>
+
+            <RadioGroup
+                android:id="@+id/add_privacy_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/seperator2">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Private"
+                    android:id="@+id/add_private"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginEnd="50dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Public"
+                    android:id="@+id/add_public" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textSize="15sp"
+                android:text="Potty Sharing"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/add_potty_gender"
+                android:layout_below="@+id/add_privacy_group"/>
+            <View
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:background="#3F51B5"
+                android:id="@+id/seperator3"
+                android:layout_below="@id/add_potty_gender"
+                android:layout_centerHorizontal="true"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/add_gender_preference_group"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/seperator3">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unisex"
+                    android:id="@+id/add_unisex"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginEnd="50dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male/Female"
+                    android:id="@+id/add_m_f" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textSize="15sp"
+                android:text="Benefits"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/view_potty_benefits"
+                android:layout_below="@+id/add_gender_preference_group"/>
+            <View
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/seperator4"
+                android:layout_below="@id/view_potty_benefits"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:id="@+id/add_rl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperator4"
+                android:layout_marginTop="10dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dryer"
+                    android:id="@+id/add_benefits_dryer"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginStart="54dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soap"
+                    android:id="@+id/add_benefits_soap"
+                    android:layout_below="@+id/add_benefits_dryer"
+                    android:layout_alignLeft="@+id/add_benefits_dryer"
+                    android:layout_alignStart="@+id/add_benefits_dryer"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bidet"
+                    android:id="@+id/add_benefits_bidet"
+                    android:checked="false"
+                    android:layout_below="@+id/add_benefits_soap"
+                    android:layout_alignLeft="@+id/add_benefits_soap"
+                    android:layout_alignStart="@+id/add_benefits_soap" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diaper Station"
+                    android:id="@+id/add_benefits_diaper_sec"
+                    android:checked="false"
+                    android:layout_alignTop="@+id/add_benefits_dryer"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginEnd="60dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dispenser"
+                    android:id="@+id/add_benefits_dispenser"
+                    android:checked="false"
+                    android:layout_alignBottom="@+id/add_benefits_soap"
+                    android:layout_alignLeft="@+id/add_benefits_diaper_sec"
+                    />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tissue"
+                    android:id="@+id/add_benefits_tissue"
+                    android:checked="false"
+                    android:layout_alignBottom="@+id/add_benefits_bidet"
+                    android:layout_alignLeft="@id/add_benefits_diaper_sec" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/add_cv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="10dp"
+                android:layout_below="@+id/add_rl_layout"
+                android:layout_centerHorizontal="true"
+                card_view:cardBackgroundColor="#3F51B5"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                card_view:cardElevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Potty"
+                    android:textColor="#fff"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    />
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

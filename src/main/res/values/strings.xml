@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PottyfinderApp</string>
+    <string name="facebook_app_id">160861507635756</string>
+    <string name="fb_app_id">1673506649555603</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_view_restroom">ViewRestroomActivity</string>
+
+    <string name="title_activity_add_restroom">AddRestroomActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_test_map">Map</string>
+    <string name="title_activity_search_potty">SearchPottyActivity</string>
+    <string name="title_activity_maps2">Map</string>
+</resources>

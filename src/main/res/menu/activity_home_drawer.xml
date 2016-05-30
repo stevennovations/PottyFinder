@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_pageview"
+            android:title="Potty Search" />
+        <item
+            android:id="@+id/nav_add"
+            android:icon="@drawable/ic_pin_drop"
+            android:title="Add Potty" />
+        <item
+            android:id="@+id/nav_view_added"
+            android:icon="@drawable/ic_view_list"
+            android:title="View Added Potty" />
+        <item
+            android:id="@+id/nav_set"
+            android:icon="@drawable/ic_settings"
+            android:title="Logout" />
+    </group>
+
+</menu>

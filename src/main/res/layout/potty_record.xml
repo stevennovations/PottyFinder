@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/seperator9"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/record_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/seperator9"
+        android:background="@drawable/ic_account"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/record_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="18sp"
+        android:layout_toRightOf="@+id/record_icon"
+        android:layout_toEndOf="@+id/record_icon" />
+
+    <TextView
+        android:id="@+id/record_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/record_star"
+        android:layout_toStartOf="@+id/record_star" />
+
+    <ImageView
+        android:id="@+id/record_star"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_star"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FDE53A"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/record_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="15sp"
+        android:layout_below="@id/record_icon"
+        android:layout_alignLeft="@id/record_icon"
+        android:layout_marginLeft="55dp"
+     />
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp">
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/review_rating"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/review_rating"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/asdasd"
+        android:imeOptions="actionDone">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:minLines="2"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/review_text"
+            android:layout_centerHorizontal="true"
+            android:hint="Comment (Max 140)"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+</RelativeLayout>
